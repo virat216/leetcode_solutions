@@ -1,14 +1,18 @@
 import os
-from github import Github
+from github import Github, Auth
 from dotenv import load_dotenv
 
 # Load token from .env
 load_dotenv()
 ACCESS_TOKEN = os.getenv("GITHUB_TOKEN")
 
-# Connect to GitHub
-g = Github(ACCESS_TOKEN)
-repo = g.get_repo("virat216/leetcode_solutions")
+# Use new authentication method
+auth = Auth.Token(ACCESS_TOKEN)
+g = Github(auth=auth)
+
+# Connect to your repo
+repo = g.get_repo("virat216/leetcode_solutions")  # exact repo name
+
 # Example: Add a test file
 file_path = "solutions/test_file.py"
 commit_message = "Add test file"
