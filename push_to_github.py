@@ -8,8 +8,7 @@ ACCESS_TOKEN = os.getenv("GITHUB_TOKEN")
 
 # Connect to GitHub
 g = Github(ACCESS_TOKEN)
-repo = g.get_repo("your_username/leetcode-solutions")  # replace with your repo name
-
+repo = g.get_repo("virat216/leetcode_solutions")
 # Example: Add a test file
 file_path = "solutions/test_file.py"
 commit_message = "Add test file"
