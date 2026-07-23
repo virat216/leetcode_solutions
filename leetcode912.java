@@ -1,6 +1,6 @@
 /*
 ============================================================
-LEETCODE 912 - Sort an Array
+LEETCODE 912 - Sort an Array (merge sort is used).
 
 Problem
 
